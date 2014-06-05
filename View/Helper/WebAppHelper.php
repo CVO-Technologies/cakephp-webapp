@@ -10,11 +10,13 @@ class WebAppHelper extends AppHelper {
 		
 		foreach ($blocks as $block) {
 			if ($block == 'content') {
+		//		print_r($content);
 				$data['blocks'][$block] = $content;
 			} else {
 				$data['blocks'][$block] = $this->_View->fetch($block);
 			}
 		}
+		//print_r($data);
 	
 		$data['variables']['title'] = $this->_View->viewVars['title_for_layout'];
 		
