@@ -1,9 +1,51 @@
 #nprogress .bar,
 #nprogress .spinner {
-    z-index: 999999;
-    }
-	@media (max-width: 767px) {
+	z-index: 999999;
+}
+@media (max-width: 767px) {
     #nprogress .spinner {
         display: none;
     }
+}
+
+.web-app {
+	pointer-events: none;
+	-webkit-pointer-events: none;
+}
+
+.web-app .peg {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+	opacity: 1.0;
+
+	-webkit-transform: rotate(3deg) translate(0px, -4px);
+	-moz-transform: rotate(3deg) translate(0px, -4px);
+	-ms-transform: rotate(3deg) translate(0px, -4px);
+	-o-transform: rotate(3deg) translate(0px, -4px);
+	transform: rotate(3deg) translate(0px, -4px);
+}
+
+.web-app .spinner {
+	display: block;
+	z-index: 100;
+}
+
+.web-app .spinner-icon {
+	width: 14px;
+	height: 14px;
+
+	border:  solid 2px transparent;
+	border-top-color:  #29d;
+	border-left-color: #29d;
+	border-radius: 10px;
+
+	-webkit-animation: nprogress-spinner 400ms linear infinite;
+	-moz-animation:    nprogress-spinner 400ms linear infinite;
+	-ms-animation:     nprogress-spinner 400ms linear infinite;
+	-o-animation:      nprogress-spinner 400ms linear infinite;
+	animation:         nprogress-spinner 400ms linear infinite;
 }

@@ -1,0 +1,8 @@
+{
+	"description": "Allows in-page reloads of pages",
+	"dependencies": {
+		"plugins": [
+
+		]
+	}
+}
